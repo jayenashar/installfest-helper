@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="home">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Ubuntu is a complete system comparable to 
+Windows and OS X.  Would you like to install Ubuntu?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#ubuntu" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#nonubuntu" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#linuxhelp" data-transition="slide">
+                            What about Linux?
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Ubuntu -->
+        <div data-role="page" id="ubuntu">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Would you like to install a virtual machine?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtual" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#baremetal" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualhelp" data-transition="slide">
+                            What's the difference?
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Not Ubuntu -->
+        <div data-role="page" id="nonubuntu">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        I think you already know what you are doing
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- What about Linux? -->
+        <div data-role="page" id="linuxhelp">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Ubuntu is built on top of Linux.  Linux is the 
+base component which talks to your machine.  By installing Ubuntu, you 
+are installing Linux.  Would you like to install Ubuntu?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#ubuntu" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#nonubuntu" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- I have another question -->
+        <div data-role="page" id="help">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <div>
+                    Please e-mail me at
+                    <a id="emailhelp" href="mailto:jayen@jayenashar.org?subject=installfest%20helper" data-transition="fade">
+                        jayen@jayenashar.org
+                    </a>
+                    so I can add your question to this helper.  Thanks.<br />
+                    In the mean time, ask someone else, or the internet.
+                </div>
+            </div>
+        </div>
+        <!-- Virtual Machine -->
+        <div data-role="page" id="virtual">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Are you using OS X or Windows?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualosx" data-transition="slide">
+                            Mac OS X
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualwin" data-transition="slide">
+                            Microsoft Windows
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Not virtual -->
+        <div data-role="page" id="baremetal">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Do you have a Mac or a PC?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#baremetalmac" data-transition="slide">
+                            Mac
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#baremetalpc" data-transition="slide">
+                            PC
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- What's the difference? -->
+        <div data-role="page" id="virtualhelp">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        A virtual machine is like a machine inside your 
+machine.  The main advantage of a virtual machine is that you can run 
+two operating systems simultaneously (without rebooting).  The main 
+disadvantage is resources.  If you don't have enough memory to run both 
+simultaneously, it will be very slow.  Would you like to install a 
+virtual machine?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtual" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#baremetal" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Virtual Machine on OS X -->
+        <div data-role="page" id="virtualosx">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Which virtual machine software would you like to use?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualbox" data-transition="slide">
+                            VirtualBox
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxvmware" data-transition="slide">
+                            VMware
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxparallels" data-transition="slide">
+                            Parallels
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxq" data-transition="slide">
+                            Q
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxvirtualcomparison" data-transition="slide">
+                            What's the difference?
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Virtual Machine on Windows -->
+        <div data-role="page" id="virtualwin">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Which virtual machine software would you like to use?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualbox" data-transition="slide">
+                            VirtualBox
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winvmware" data-transition="slide">
+                            VMware
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winparallels" data-transition="slide">
+                            Parallels
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winvirtualpc" data-transition="slide">
+                            Virtual PC
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winvirtualcomparison" data-transition="slide">
+                            What's the difference?
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Not virtual - Mac -->
+        <div data-role="page" id="baremetalmac">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        This is not a recommended configuration.  Would 
+you like to install a virtual machine?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualosx" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#baremetalmac2" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <!-- TODO: This option may have been presented before -->
+                        <!-- TODO: Taking this path will ask if you have OS X -->
+                        <a href="#virtualhelp" data-transition="slide">
+                            What's the difference?
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Not virtual - PC -->
+        <div data-role="page" id="baremetalpc">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Wubi allows you to install Ubuntu inside 
+Windows.  The main advantage is that you don't have to repartition, 
+saving you time during the installation process.  The main disadvantage 
+is that if you reinstall Windows, you will lose Ubuntu.  Would you like 
+to use Wubi?  You must use Wubi if you have <!--an MBR with a DOS 
+partition table and--> four primary partitions and you are unwilling to 
+remove a partition.
+                    </li>
+                    <li data-theme="c">
+                        <a href="#wubi" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#raw" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#partitioncheck" data-transition="slide">
+                            How do I check my partitions?
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- VirtualBox -->
+        <div data-role="page" id="virtualbox">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please download VirtualBox and the Extension 
+Pack from https://www.virtualbox.org/wiki/Downloads and ask for a DVD 
+with a virtual machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="https://www.virtualbox.org/wiki/Downloads" data-transition="slide">
+                            https://www.virtualbox.org/wiki/Downloads
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- OS X VMware -->
+        <div data-role="page" id="osxvmware">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please purchase and download VMware Fusion from 
+https://www.vmware.com/au/vmwarestore and ask for a DVD with a virtual 
+machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="https://www.vmware.com/au/vmwarestore" data-transition="slide">
+                            https://www.vmware.com/au/vmwarestore
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- OS X Parallels -->
+        <div data-role="page" id="osxparallels">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please purchase and download Parallels Desktop 
+from http://www.parallels.com/au/store/ and ask for a DVD with a virtual 
+machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.parallels.com/au/store/" data-transition="slide">
+                            http://www.parallels.com/au/store/
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Q -->
+        <div data-role="page" id="osxq">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please download Q from http://www.kju-app.org/ 
+and ask for a DVD with a virtual machine image or download a CD image 
+from http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.kju-app.org/" data-transition="slide">
+                            http://www.kju-app.org/
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- OS X VM Comparison -->
+        <div data-role="page" id="osxvirtualcomparison">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Which virtual machine software would you like to use?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualbox" data-transition="slide">
+                            VirtualBox is a cross-platform, mostly open-source solution from Oracle.  Cost: $0
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxvmware" data-transition="slide">
+                            VMware has been a major player in the virtual machine business for a long time.  Cost: $50
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxparallels" data-transition="slide">
+                            Parallels was the first player in the MacTel virtual machine business.  Cost: $90
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#osxq" data-transition="slide">
+                            Q is based on the cross-platform, open-source qemu.  Cost: $0
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Windows VMware -->
+        <div data-role="page" id="winvmware">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please download VMware Player from 
+http://www.vmware.com/go/downloadplayer/ and ask for a DVD with a 
+virtual machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.vmware.com/go/downloadplayer/" data-transition="slide">
+                            http://www.vmware.com/go/downloadplayer/
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Windows Parallels -->
+        <div data-role="page" id="winparallels">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please purchase and download Parallels 
+Workstation from http://www.parallels.com/au/store/ and ask for a DVD 
+with a virtual machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.parallels.com/au/store/" data-transition="slide">
+                            http://www.parallels.com/au/store/
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Windows Virtual PC -->
+        <div data-role="page" id="winvirtualpc">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Which version of Windows are you running?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualpcvista" data-transition="slide">
+                            Vista
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualpc7" data-transition="slide">
+                            7
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Virtual Machine on Windows Comparison -->
+        <div data-role="page" id="winvirtualcomparison">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Which virtual machine software would you like to use?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#virtualbox" data-transition="slide">
+                            VirtualBox is a cross-platform, mostly open-source solution from Oracle.  Cost: $0
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winvmware" data-transition="slide">
+                            VMware has been a major player in the virtual machine business for a long time.  Cost: $0
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winparallels" data-transition="slide">
+                            Parallels was the first player in the MacTel virtual machine business.  Cost: $50
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#winvirtualpc" data-transition="slide">
+                            Virtual PC is Microsoft's offering, which was originally made for Macs to run Windows.  Not available for starter editions of Windows.  Cost: $0
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Not virtual - Mac - Really -->
+        <div data-role="page" id="baremetalmac2">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please ask for a CD or USB, or connect to the 
+installfest network.  When rebooting, hold down C for CD or USB or N for 
+network.
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Wubi -->
+        <div data-role="page" id="wubi">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please ask for a CD or USB, or download wubi 
+from http://www.ubuntu.com/download/desktop/windows-installer
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop/windows-installer" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop/windows-installer
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Raw - PC -->
+        <div data-role="page" id="raw">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please ask for a CD or USB, or connect to the 
+installfest network.  When rebooting, press the key appropriate for your 
+system for getting a boot device menu.  F8 and F12 are common.
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Not virtual - PC - Partition check -->
+        <div data-role="page" id="partitioncheck">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        From the start menu, search for "Disk 
+Management".  (It may be called "Create and format hard disk 
+partitions".)  Locate your hard disk in the lower panel (usually Disk 
+0).  If you have four primary partitions (dark blue), you must use Wubi 
+or delete a partition.  If you have fewer than four primary partitions, 
+you can shrink them at this time to make space for Ubuntu, which is 
+generally considered safer than shrinking them from the Ubuntu 
+installer.  Would you like to use Wubi?
+                    </li>
+                    <li data-theme="c">
+                        <a href="#wubi" data-transition="slide">
+                            Yes
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="#raw" data-transition="slide">
+                            No
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Virtual PC Vista -->
+        <div data-role="page" id="virtualpcvista">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please download Virtual PC 2007 from 
+http://www.microsoft.com/en-us/download/details.aspx?id=24439 and ask 
+for a DVD with a virtual machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.microsoft.com/en-us/download/details.aspx?id=24439" data-transition="slide">
+                            http://www.microsoft.com/en-us/download/details.aspx?id=24439
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Virtual PC 7 -->
+        <div data-role="page" id="virtualpc7">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <ul data-role="listview" data-divider-theme="b" data-inset="true">
+                    <li data-role="list-divider" role="heading">
+                        Please download Windows Virtual PC from 
+http://www.microsoft.com/en-us/download/details.aspx?id=3702 . Ask for a 
+DVD with a virtual machine image or download a CD image from 
+http://www.ubuntu.com/download/desktop
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.microsoft.com/en-us/download/details.aspx?id=3702" data-transition="slide">
+                            http://www.microsoft.com/en-us/download/details.aspx?id=3702
+                        </a>
+                    </li>
+                    <li data-theme="c">
+                        <a href="http://www.ubuntu.com/download/desktop" data-transition="slide">
+                            http://www.ubuntu.com/download/desktop
+                        </a>
+                    </li>
+                </ul>
+                <a data-role="button" data-transition="fade" href="#installed">
+                    A volunteer has helped me install linux
+                </a>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <!-- Installed -->
+        <div data-role="page" id="installed">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    Installfest Helper
+                </h3>
+            </div>
+            <div data-role="content" style="padding: 15px">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="vertical">
+                        <legend>
+                            Ask a volunteer to show you how to do the 
+following in Ubuntu
+                        </legend>
+                        <input name="checkbox1" id="checkbox1" type="checkbox">
+                        <label for="checkbox1">
+                            Open a local shell
+                        </label>
+                        <input name="checkbox2" id="checkbox2" type="checkbox">
+                        <label for="checkbox2">
+                            Open a remote shell on CSE
+                        </label>
+                        <input name="checkbox3" id="checkbox3" type="checkbox">
+                        <label for="checkbox3">
+                            Open a remote shell on CSE and launch gedit
+                        </label>
+                        <input name="checkbox4" id="checkbox4" type="checkbox">
+                        <label for="checkbox4">
+                            Open a remote folder on CSE
+                        </label>
+                        <input name="checkbox5" id="checkbox5" type="checkbox">
+                        <label for="checkbox5">
+                            Install software
+                        </label>
+                        <input name="checkbox6" id="checkbox6" type="checkbox">
+                        <label for="checkbox6">
+                            Connect to uniwide
+                        </label>
+                    </fieldset>
+                </div>
+                <a data-role="button" data-transition="fade" href="#help">
+                    I have another question
+                </a>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+            $(document).ready(function() {
+              $("a").click(function() {
+                $("#emailhelp").attr('href', "mailto:jayen@jayenashar.org?subject=installfest%20helper%20-%20" + location.hash);
+              });
+            });
+        </script>
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-11576720-1']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>
